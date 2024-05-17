@@ -22,8 +22,8 @@ export class AppSyncCdkStack extends cdk.Stack {
   constructor(scope: Construct, id: string, props: AppSyncCdkStackProps) {
     super(scope, id, props);
 
-    console.log('StackName 👉', cdk.Stack.of(this).stackName);
     console.log('StackName Param 👉', cdk.Aws.STACK_NAME);
+    // console.log('StackName 👉', cdk.Stack.of(this).stackName);
 
     const logConfig: cdk.aws_appsync.LogConfig = {
       retention: logs.RetentionDays.ONE_WEEK,
