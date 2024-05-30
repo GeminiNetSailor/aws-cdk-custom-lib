@@ -37,7 +37,7 @@ export class AppSyncCdkStack extends cdk.Stack {
       }
     } : undefined;
 
-    this.api = new cdk.aws_appsync.GraphqlApi(this, `${cdk.Stack.of(this).stackName}-graphql-api`, {
+    this.api = new cdk.aws_appsync.GraphqlApi(this, `GraphqlApi`, {
       name: `${cdk.Stack.of(this).stackName}-graphql-api`,
       schema: props.schema,
       authorizationConfig,
